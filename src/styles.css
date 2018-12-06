@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files
+/*body{
+    margin: 0%;
+    padding: 0%;
+    background: url(F:\edwisor\ass-2\Frntend\todo-list\src\assets\main.jpg) no-repeat;
+    background-size: 100%;
+    height: 100%;
+    background-position: initial;
+    font-family: sans-serif;
+} */
+
+.hover-cursor{
+    cursor: pointer;
+}

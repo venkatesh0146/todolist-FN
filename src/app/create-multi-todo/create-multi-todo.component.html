@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row ">
+    <div class="col align-self-center">
+      <p>Add a new task</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row ">
+    <div class="col align-self-center ">
+      <div class="input-group">
+        <input type="text" class="form-control" #itemTitle ng-keypress="($event.charCode==13)? onAdd(itemTitle) ">
+        <div class="input-group-addon hover-cursor" (click)="onAdd(itemTitle)">
+          <i class="fa fa-plus-circle fa-2x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col pad">
+      <div style="margin:5px 0px">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of todoLists">
+            <span class="hover-cursor" [class.text-success]="item.status" (click)="alterCheck(item.id,item.status)">
+              <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-thin-o':'fa-check-circle-o'"></i>
+            </span>
+            {{item.task}}
+            <span class="hover-cursor text-danger pull-right" (click)="onDelete(item.id)">
+              <i class="fa fa-trash-o fa-lg"></i>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
